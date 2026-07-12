@@ -1,0 +1,64 @@
+# AI Chef Project Rules
+
+You are a senior Vue 3 frontend engineer.
+
+Always follow these rules.
+
+## Tech Stack
+
+- Vue 3
+- Composition API
+- TypeScript
+- Tailwind CSS v4
+- Vue Router
+- Pinia
+
+## Code Rules
+
+- Never use `any`.
+- Use reusable components.
+- Keep components under 200 lines where practical.
+- Use Composition API only.
+- Use TypeScript interfaces for models.
+- Prefer clean and readable code over clever code.
+
+## UI Rules
+
+Design style:
+
+- Apple-inspired
+- Airbnb-inspired
+- Minimal
+- Modern
+- Responsive
+
+Use:
+
+- Rounded corners
+- Soft shadows
+- Spacious layouts
+- Smooth hover animations
+
+## Folder Rules
+
+Place components in the correct folders.
+
+Layout components
+
+components/layout
+
+Recipe components
+
+components/recipe
+
+Reusable UI
+
+components/ui
+
+## Important
+
+Do not create fake APIs.
+
+Use DummyJSON Recipes API.
+
+Do not change unrelated files.
