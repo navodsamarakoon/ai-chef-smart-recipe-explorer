@@ -1,32 +1,27 @@
 # 🍳 AI Chef – Smart Recipe Explorer
 
-> A modern recipe discovery web application built with Vue 3, TypeScript, Tailwind CSS, Pinia, and the DummyJSON Recipes API.
-
-## 🌐 Live Demo
-
-🔗 **Live Demo:** YOUR_VERCEL_LINK
-
-## 📂 GitHub Repository
-
-🔗 **GitHub:** https://github.com/navodsamarakoon/ai-chef-smart-recipe-explorer
+> A modern and responsive recipe discovery web application built with Vue 3, TypeScript, Tailwind CSS, Pinia, Vue Router, and the DummyJSON Recipes API.
 
 ---
 
-## 📖 About the Project
+## 📖 Overview
 
-AI Chef – Smart Recipe Explorer is a modern frontend web application designed to make discovering and exploring recipes simple, interactive, and enjoyable.
+**AI Chef – Smart Recipe Explorer** is a modern frontend web application designed to provide users with a simple and interactive way to discover, search, filter, and explore recipes.
 
-The application allows users to:
+The application was developed as a university **GUI Programming project**, with a focus on modern frontend development principles such as:
 
-- 🔎 Search for recipes
-- 🍽️ Browse recipe collections
-- 🏷️ Filter recipes
-- 📖 View detailed recipe information
-- ❤️ Save favorite recipes
-- ⭐ Explore recipe ratings
-- 📱 Use the application across different screen sizes
+- Component-based architecture
+- Responsive user interface design
+- REST API integration
+- State management
+- Client-side routing
+- Type-safe development
+- Reusable UI components
+- User-friendly interaction
 
-The project was developed as a university GUI Programming project with a focus on modern frontend development, API integration, reusable components, responsive design, and user experience.
+The current version focuses on the **frontend experience and recipe exploration**.
+
+> 🚀 An extended version of AI Chef is being developed separately with an online-learning recommendation system using machine learning.
 
 ---
 
@@ -34,74 +29,92 @@ The project was developed as a university GUI Programming project with a focus o
 
 ### 🔎 Recipe Search
 
-Users can search through recipes using keywords.
+Users can search for recipes using keywords and quickly find relevant recipes.
 
 ### 🏷️ Recipe Filtering
 
-Recipes can be filtered based on available recipe attributes.
+Recipes can be explored using different filtering options to help users discover recipes based on their preferences.
+
+### 🍽️ Recipe Exploration
+
+The application provides a collection of recipes that users can browse through an interactive interface.
 
 ### 📖 Recipe Details
 
-Each recipe has a dedicated detail view containing information such as:
+Users can open an individual recipe to view detailed information, including:
 
 - Recipe name
 - Ingredients
 - Instructions
+- Cuisine
+- Difficulty
+- Meal type
 - Preparation information
 - Cooking information
 - Tags
-- Cuisine
-- Difficulty
+- Recipe image
 
 ### ❤️ Favorites
 
-Users can mark recipes as favorites and access their preferred recipes more easily.
+Users can mark recipes as favorites and easily access their preferred recipes.
 
-### 📱 Responsive Interface
+### 📱 Responsive Design
 
-The interface is designed to work across:
+The interface is designed to provide a consistent experience across:
 
 - Desktop
 - Laptop
 - Tablet
-- Mobile
+- Mobile devices
+
+### ⚡ Dynamic Data
+
+Recipe information is retrieved dynamically from the DummyJSON Recipes API rather than being hard-coded into the application.
 
 ---
 
-## 🛠️ Technology Stack
+# 🛠️ Technology Stack
 
 | Technology | Purpose |
 |---|---|
-| Vue 3 | Frontend framework |
-| TypeScript | Type safety and maintainability |
-| Tailwind CSS | Responsive UI styling |
-| Pinia | State management |
-| Vue Router | Client-side navigation |
-| Vite | Development and build tool |
-| DummyJSON Recipes API | Recipe data |
+| **Vue 3** | Frontend framework |
+| **TypeScript** | Type-safe development |
+| **Tailwind CSS** | Responsive UI styling |
+| **Pinia** | State management |
+| **Vue Router** | Client-side navigation |
+| **Vite** | Development server and build tool |
+| **DummyJSON Recipes API** | Recipe data source |
 
 ---
 
-## 🏗️ Application Architecture
+# 🏗️ Application Architecture
+
+The application follows a modern component-based frontend architecture.
 
 ```text
-                  ┌─────────────────────┐
-                  │       User          │
-                  └──────────┬──────────┘
-                             │
-                             ▼
-                  ┌─────────────────────┐
-                  │     Vue 3 SPA       │
-                  │                     │
-                  │  Components / Views │
-                  └──────────┬──────────┘
-                             │
-             ┌───────────────┼───────────────┐
-             ▼               ▼               ▼
-         Pinia Store    Vue Router     UI Components
-             │
-             ▼
-      Recipe Application State
-             │
-             ▼
-       DummyJSON Recipes API
+                    ┌───────────────────┐
+                    │       User        │
+                    └─────────┬─────────┘
+                              │
+                              ▼
+                    ┌───────────────────┐
+                    │    Vue 3 SPA      │
+                    └─────────┬─────────┘
+                              │
+             ┌────────────────┼────────────────┐
+             │                │                │
+             ▼                ▼                ▼
+       Vue Components    Vue Router        Pinia Store
+             │                │                │
+             └────────────────┼────────────────┘
+                              │
+                              ▼
+                    ┌───────────────────┐
+                    │  Recipe Service   │
+                    └─────────┬─────────┘
+                              │
+                              ▼
+                    ┌───────────────────┐
+                    │ DummyJSON Recipes │
+                    │       API         │
+                    └───────────────────┘
