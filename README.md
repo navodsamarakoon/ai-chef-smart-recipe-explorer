@@ -1,48 +1,107 @@
-# ai-chef-smart-recipe-explorer
+# 🍳 AI Chef – Smart Recipe Explorer
 
-This template should help get you started developing with Vue 3 in Vite.
+> A modern recipe discovery web application built with Vue 3, TypeScript, Tailwind CSS, Pinia, and the DummyJSON Recipes API.
 
-## Recommended IDE Setup
+## 🌐 Live Demo
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+🔗 **Live Demo:** YOUR_VERCEL_LINK
 
-## Recommended Browser Setup
+## 📂 GitHub Repository
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+🔗 **GitHub:** https://github.com/navodsamarakoon/ai-chef-smart-recipe-explorer
 
-## Type Support for `.vue` Imports in TS
+---
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## 📖 About the Project
 
-## Customize configuration
+AI Chef – Smart Recipe Explorer is a modern frontend web application designed to make discovering and exploring recipes simple, interactive, and enjoyable.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+The application allows users to:
 
-## Project Setup
+- 🔎 Search for recipes
+- 🍽️ Browse recipe collections
+- 🏷️ Filter recipes
+- 📖 View detailed recipe information
+- ❤️ Save favorite recipes
+- ⭐ Explore recipe ratings
+- 📱 Use the application across different screen sizes
 
-```sh
-npm install
-```
+The project was developed as a university GUI Programming project with a focus on modern frontend development, API integration, reusable components, responsive design, and user experience.
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
-npm run dev
-```
+## ✨ Features
 
-### Type-Check, Compile and Minify for Production
+### 🔎 Recipe Search
 
-```sh
-npm run build
-```
+Users can search through recipes using keywords.
 
-### Lint with [ESLint](https://eslint.org/)
+### 🏷️ Recipe Filtering
 
-```sh
-npm run lint
-```
+Recipes can be filtered based on available recipe attributes.
+
+### 📖 Recipe Details
+
+Each recipe has a dedicated detail view containing information such as:
+
+- Recipe name
+- Ingredients
+- Instructions
+- Preparation information
+- Cooking information
+- Tags
+- Cuisine
+- Difficulty
+
+### ❤️ Favorites
+
+Users can mark recipes as favorites and access their preferred recipes more easily.
+
+### 📱 Responsive Interface
+
+The interface is designed to work across:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+---
+
+## 🛠️ Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| Vue 3 | Frontend framework |
+| TypeScript | Type safety and maintainability |
+| Tailwind CSS | Responsive UI styling |
+| Pinia | State management |
+| Vue Router | Client-side navigation |
+| Vite | Development and build tool |
+| DummyJSON Recipes API | Recipe data |
+
+---
+
+## 🏗️ Application Architecture
+
+```text
+                  ┌─────────────────────┐
+                  │       User          │
+                  └──────────┬──────────┘
+                             │
+                             ▼
+                  ┌─────────────────────┐
+                  │     Vue 3 SPA       │
+                  │                     │
+                  │  Components / Views │
+                  └──────────┬──────────┘
+                             │
+             ┌───────────────┼───────────────┐
+             ▼               ▼               ▼
+         Pinia Store    Vue Router     UI Components
+             │
+             ▼
+      Recipe Application State
+             │
+             ▼
+       DummyJSON Recipes API
